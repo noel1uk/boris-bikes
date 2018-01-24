@@ -13,5 +13,9 @@ describe DockingStation do
     expect(subject).to respond_to(:dock).with(1).argument
   end
 
+  it "should dock the bike we are giving it" do
+    bike = subject.release_bike
+    expect(subject.dock(bike)).to eq(bike)
+  end
 
 end
