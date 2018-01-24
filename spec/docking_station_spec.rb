@@ -8,4 +8,10 @@ describe DockingStation do
   it "should create a new bike when release_bike method is called" do
     expect(subject.release_bike).to be_instance_of(Bike)
   end
+
+  it "should dock respond to the dock method" do
+    expect(subject).to respond_to(:dock).with(1).argument
+  end
+
+
 end
