@@ -13,6 +13,8 @@ class DockingStation
     if empty?
       raise "No bikes at the station"
     end
+    bike_to_release = @bike_rack[@bike_rack.length - 1]
+    raise "this bike is broken" if bike_to_release.working == false
     @bike_rack.pop
   end
 
